@@ -1,0 +1,156 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body {
+	background-color: #d5d5d5;
+	font-family:"Times New Roman", Times, serif;
+	color:#330000
+}
+
+#header{
+	height:110px;
+	/*width: 1024px;*/
+	background-image: url(../images/header.png);
+	/*background-repeat:repeat-x;*/
+}
+
+
+h1{
+	padding-left:125px;
+	padding-bottom:1px;
+	padding-top:30px;
+	font-size:63px;
+	margin-top:0px;
+	
+}
+h2{
+	border-bottom:solid 2px #8B0000;
+	
+}
+
+h3 {
+	border-bottom:solid 2px #8B0000;
+	margin-left:200px
+}
+
+img {
+	
+}
+
+a:link {
+	color:#330000;
+	/*text-decoration: none;*/
+}
+
+a:visited {
+	color:#330000;
+}
+
+a:hover {
+	color:#330000;
+}
+
+a:active {
+	color: #FF0000;
+}
+
+#sidebar{/*This controls the CSS for all of the items actually ON the sidebar image*/
+	float:left;
+	width:130px;
+	height: 768px;
+	text-align:center;
+	background-image: url(../images/sidebar.png);
+	font-family:"Times New Roman", Times, serif;
+	font-size:18px;
+	
+	
+	
+}
+#sidebarnoimage h6{/*This controls the CSS for all of the items OFF the sidebar image*/
+	width:130px;
+	padding-top:90px;
+	text-align:center;
+	color:#3399cc;
+	text-decoration:none;
+}
+
+#sidebarnoimage a img{/*controls the social media icons*/
+	height:25px;
+	width:25px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:6px;
+}
+	
+	
+#firstbullet{/*helps to align links in navigation*/
+	padding-top: 35px;
+	/*margin:auto;*/
+}
+
+ul li{
+	text-decoration:none;
+	list-style:none;
+	padding-top:0px;
+	padding-bottom: 75px;
+	padding-right:35px;/*DON'T TOUCH THIS. Controls how centered the links on the right are in sidebar.*/
+	text-align:center;
+	
+}
+table{
+	border-collapse:collapse;
+	border-color:transparent;
+	width:200px;
+	height:200px;
+	margin-left:50px;
+	
+}
+
+table tr td{
+	padding-left:10px;
+	padding-right:10px
+}
+
+
+#main{
+	padding-top:50px;
+	padding-left:150px;
+	color:#330000;
+	font:"Times New Roman", Times, serif;"
+}
+
+#main dt{/*adds underline to headings in resume page*/
+	text-decoration:underline;
+}
+
+p{
+	padding-left:200px;
+		
+}
+img{
+	float:left;
+	padding-left:20px;
+	padding-top:20px;
+	padding-right:20px;
+}
+
+tr td img{
+	
+	padding-left:20px;
+	padding-bottom:20px;
+	padding-right:20px;
+	padding-top:10px;
+}
+
+
+
+
+/*footer a img {
+	
+	height:25px;
+	width:25px;
+	padding-left:5px;
+	padding-right:5px;
+	margin-left:0px;
+}*/

@@ -1,0 +1,99 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 4px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:18px;
+	background-color:#333;
+}
+
+#map{
+	height: 500px;
+	width: 1000px;
+}
+
+.wordwrap{
+	width: 272px;
+	word-wrap:break-word;
+	color:#aaa;
+	font-size:14px;
+	padding-left:3px;
+	padding-right:5px;
+}
+
+#title {
+	font-size:48px;
+	color:#F00;
+	margin-top:0px;
+}
+
+#small{
+	color:#CCC;
+	font-size:24px;
+}
+
+a:link {
+	color:#FFF;
+}
+a:visited {
+	color:#F00;
+}
+
+#container{
+	width:1000px;
+}
+
+#vcr-controls{
+	margin-left:275px;
+	padding-top:10px;
+	float:left;
+	width: 250px;
+	padding-bottom:10px;
+}
+
+.vcr:hover{
+	opacity: .4;
+}
+
+#temporalSlider {
+	margin: 19px 0px 0px 575px;
+	width: 500px;
+}
+
+#controlcontainer{
+	margin: 5px 0px 0px 275px;
+	
+}
+
+#timestampStyle{
+	color:#aaa;
+	font-size:18px;
+	padding-left:3px;
+	padding-right:3px;
+	display:inline;
+	font-size: 20px;
+	
+}
+
+#timeStamp{
+	display:inline;
+	color:#aaa;
+	font-size:20px;
+}
+
+#legend{
+	margin-top:auto;
+}
+#minMax{
+	padding-left:20px;
+}
+.min:hover{
+	opacity: .4;
+}
+
+.max:hover{
+	opacity: .4;
+}

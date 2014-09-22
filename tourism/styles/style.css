@@ -1,0 +1,66 @@
+body{
+	background-image:url(../images/background.png);
+	background-color:white;
+	padding-bottom: 100px;
+	padding-left:350px;
+	padding-right:250px;
+}
+h1{
+	color: white;
+	font-size:55px;
+}
+h2 {
+	font-size: 1.3em;
+	color: grey;
+	padding: 0;
+	margin: 0;
+}
+h3{
+	color: white;
+	font-size:24px;
+}
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+a:link{
+	color:gray;
+}
+a:visited{
+	color:gray;
+}
+a:hover{
+	color:red;
+}
+table td{
+	width:200px;
+	color:white;
+}
+#map {
+	width: 100%;
+	height: 600px;
+	border: 1px solid grey;
+}
+.PAR {
+	color: #3FB44F;
+}
+.entertainment {
+	color: #9D0E98;
+}
+.TAL {
+	color: #FF0000;
+}
+.food {
+	color: #1A72BA;
+}
+.food img, .TAL img, .PAR img .entertainment img {
+	margin-right: 8px;
+}
+#main{
+	background-color:black;
+	background:rgba(0,0,0,.4);
+	padding-bottom:75px;
+	padding-left:15px;
+	padding-right:15px;
+}

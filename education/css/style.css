@@ -1,0 +1,127 @@
+body{
+	background:url(../IMG/background.jpeg);
+}
+
+h2{
+	font-family: 'Special Elite', serif;
+	font-size:36px;
+	color: #6BAED6;
+}
+	
+.wordwrap{
+	width: 275px;
+	word-wrap:break-word;
+	color:#fff;
+	font-family: 'Special Elite', serif;
+	float:left;
+	text-wrap:normal;
+	padding-left:10px;
+	font-size:18px;
+	/*font-size:14px;
+	padding-left:3px;
+	padding-right:5px;*/
+}
+
+img{
+	float:left;
+}
+a:link {
+	color:#F0BE35;
+}
+a:visited {
+	color:#FFE4A8;
+}
+
+#small{
+	color:#CCC;
+	font-size:24px;
+}
+
+
+.background {
+	fill: #ddd;
+	stroke: #ccc;
+	stroke-width: 2px;
+	fill-opacity: 1.0;
+}
+
+.gratBackground {
+	fill: #555;
+}
+
+.gratLines {
+	fill: none;
+	stroke: #999;
+	stroke-width: 1px;
+}
+
+.infolabel {
+	position: absolute;
+	width: 200px;
+	height: 50px;
+	color: #ddd;
+	background-color: #333;
+	/*border: solid thin #fff;*/
+	padding: 5px;
+}
+
+.infolabel h1 {
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	line-height: 1em;
+}
+
+.infolabel b {
+	float: left;
+}
+
+.labelname {
+	display: inline-block;
+	float: right;
+	margin: -25px 0px 0px 40px;
+	font-size: 1em;
+	font-weight: bold;
+	position: absolute;
+}
+
+.pcplot {
+	margin-top: 35px;
+}
+/*.pcpBackground {
+	fill: #ccc;
+	opacity: 0.5;
+	stroke: #000;
+	stroke-width: 4px;
+	padding-left:50px;
+}*/
+.pcpLines path {
+	fill: none;
+	stroke-width: 4px;
+	stroke: #888;
+		
+}
+.axes path {
+	fill: none;
+	stroke: #F0BE35;
+	troke-opacity: 0.5;
+	stroke-linecap: round;
+}
+	
+#mapContainer{
+	height:500px;
+	width:960px;;
+	margin-left:300px;
+	position: relative;
+}
+
+#headings{
+	margin-left:300px;
+	font-family: 'Special Elite', serif;
+	color:#fff;
+	text-align:center;
+}
+
+table td{
+	width: 160px;
+}

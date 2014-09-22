@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<title>Tourism in Columbia, SC</title>
+
+<link rel="icon" type="image/jpg" href= "http://truereligiondebate.files.wordpress.com/2008/05/wwd_world2.jpg">
+
+<link href="styles/style.css" rel="stylesheet" type="text/css" />
+
+<script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+</head>
+
+<body>
+
+<div id="main">
+<div id="header">
+	<h1>Tourism in Columbia</h1>
+</div>
+
+<p style="color:white;">Welcome to the Tourism in Columbia webpage! Columbia is the capital of the beautiful state of South Carolina and is located in the center of the state. It is about an hour from Charleston, Greeneville, and Charlotte. On this page, you will find some of the many attractions that Columbia has to offer, including many local restaurants, museums, and sport venues! This map only gives you a taste of what Columbia has to offer. For more information on attractions and events that are going on, please check our main webpage that can be found <a href="http://www.columbiasc.net/" target="_blank">here</a>.</p>
+
+
+
+<br/>
+<center><div id="wrapper">
+	<div id="map">
+    </div>
+	
+    
+</div><!-- end wrapper -->
+<br/>
+<table>
+    <tr> <!--larger headings-->
+    	<td><strong>Parks and Recreation</strong></td>
+        <td><img src="images/park.png"> Parks</td>
+        <td><img src="images/recreation.png">Recreational        
+        <td><img src="images/capital.png"> Capital Building</td>
+    </tr>
+    <tr>
+    	<td><strong>Food</strong></td>
+   		<td><img src="images/food.png"> Sit Down Restaurant</td>
+    	<td><img src="images/fastfood.png"> Fast Food</td>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td><strong>Transportation and Lodging</strong></td>
+    	<td><img src="images/lodging.png"> Lodging</td>
+    	<td><img src="images/plane.png"> Airport</td>
+    	<td></td>
+    </tr>
+    <tr>
+    	<td><strong>Entertainment</strong></td>
+    	<td><img src="images/theatre.png"> Theatres</td>
+    	<td><img src="images/museum.png"> Museums</td>
+    	<td><img src="images/shopping.png"> Shopping</td>
+        <td><img src="images/movie.png"> Movies</td>
+    </tr>
+</table>	</center>
+  <script type="text/javascript">
+
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 12,
+			center: new google.maps.LatLng(34.017665, -81.034864),
+			mapTypeId: google.maps.MapTypeId.HYBRID
+		});
+
+		// populate an array with our data
+	var locations = [
+
+			["Recreation", 34.032263, -80.9599, "Forest Lake Country Club", "Located on the outskirts of Columbia, this beautiful country club offers a full 18 hole golf course and offers a great experience for the avid golfer!"],
+
+			["Recreation", 34.083399, -81.155642, "Frankie's Fun Park", "Placed right next to the mall, this fun park offers a family friendly atmosphere with mini-golf, an arcade, and batting cages. A great way for the family to spend a night out!"],
+			
+			["Recreation", 33.983547, -81.028033, "Capital City Stadium", "One of the many local baseball stadiums located around Columbia. It's the home of the Minor League baseball team, the Columbia Blowfish!"],
+			
+			["Recreation", 33.973127, -81.019226, "Williams Brice Stadium", "The football stadium for the South Carolina Gamecocks! If you're in town on gameday, going to a game would be a great family activity! Go Cocks!"],
+
+			["Recreation", 33.986534,-81.042657, "Carolina Baseball Stadium", "This is the home of the 2 time national champions South Carolina Gamecock baseball team! It's a great facility with plenty of great places to sit and watch the game."],
+			
+			["Capital", 34.000522, -81.033027, "South Carolina State House", "The central hub for the state of South Carolina, this beautiful building is located in the heart of Columbia and offers fantastic tours of the facility."],
+
+			["Hospital", 34.007260, -81.033099, "Palmetto Richland Baptist Hospital", "In case there is a medical emergency, this hospital offers some of the best care in the state."],
+
+			["Park", 34.006539, -81.04108, "Seaboard Park", "One of the many beautiful parks Columbia, SC has to offer!"],
+
+			["Park", 33.996215, -81.021274, "Maxcy Gregg Park", "A beautiful public park located near the University of South Carolina campus with a clean environment and public pool so the kids can go swimming!"],
+
+			["Park", 33.998214, -81.028742, "The Horseshoe", "The historic Horseshoe is a must see for any tourist. It's the original USC Campus!"],
+
+			["Park", 34.092615, -81.125819, "Harbison State Forest", "One of the many beautiful state forests Columbia has to offer!"],
+
+			["Plane", 33.945923, -81.124446, "Columbia Metropolitan Airport", "Columbia's local airport. This is where most of the public air traffic flies into and out of."],
+
+			["Food", 34.000667, -81.036439, "Mellow Mushroom", "A local pizza joint offering a psycodelic atmosphere and hot and fresh pizzas. It's one of the best in the south!"],
+
+			["Food", 34.000375, -81.042179, "M Vista", "A great place to get fantastic sushi and great asian style cuisine! If you love asian food, this place is for you!"],
+
+			["Food", 34.000182, -81.016255, "Grilled Teryaki", "A great place to go for the late night snack. The hibachi is a must try!"],
+
+			["Food", 34.000924, -81.01728, "Pawley's Front Porch", "One of the best burger places in the south, It was featured on Diners, Drive-in's, and Dives!"],
+
+			["Fast Food", 34.001867, -81.017645, "Chick-Fil-A", "For those of you who are less adventerous, here is one of the best chain chicken restaurants in the USA."],
+
+			["Fast Food", 34.012267, -81.04093, "McDonalds", "Ba da ba ba ba I'm lovin' it! A familiar brand that is recognized world wide."],
+
+			["Lodging", 33.999398, -81.039003, "Hampton Inn", "For a comfortable night stay in the historic Vista, this hotel offers large rooms, comfortable beds, and great views of the Vista."],
+
+			["Lodging", 34.007694, -81.049893, "Staybridge Suites", "A great apartment style hotel that offers full kitchens, living areas, and nightly dinner included!"],
+			
+			["Lodging", 34.004064, -81.026413, "Clarion Hotel Downtown", "A comfortable and affordable hotel downtown!"],
+
+			["Lodging", 34.001009, -81.025346, "Inn at USC",  "A quaint and cozy Inn located on the beatiful South Carolina Campus!"],
+
+			["Lodging", 34.005089, -81.034782, "Columbia Mariott", "A great centrally located hotel, this hotel puts you right in the middle of all the shops, restaurants, and entertainment Downtown Columbia has to offer."],
+
+			["Play", 33.99607, -81.029386, "Long Street Theatre", "The theatre located on USC's campus, this theatre offers great plays that are put on by USC's theatre department. Be sure to check it out!"],
+
+			["Play", 33.999636, -81.030576, "Town Theatre", "Where the community puts on local plays, this theatre is great for family fun!"],
+
+			["Play", 34.006953, -81.036248, "Nickelodeon Theatre", "One of the best local movie theaters offering Indie style films. This theater is small, comfortable, and welcoming!"],
+
+			["Shopping", 34.078647, -81.157214, "Columbiana Center", "A fantastic mall located on the East Side of Columbia, there are over 100 different stores and restaurants to go shopping in."],
+
+			["Shopping", 34.017428, -80.990917, "Richland Mall", "A great mall with a wide variety of stores, places to eat, and even a movie theater!"],
+
+			["Movie", 34.068516, -81.155108, "Regal Columbiana Grande 14", "One of the many local movie theaters!"],
+
+			["Movie", 34.016421, -80.989452, "Regal Columbia Cinema 7", "Located in the Richland Mall, this theater has a great selection of movies and a clean atmosphere!"],
+
+			["Museum", 34.005993, -81.036187, "Columbia Museum of Art", "Where to go to see the artistic culture of Columbia, SC!"],
+
+			["Museum", 33.998467, -81.04798, "South Carolina State Museum", "The best place to see the State of South Carolina under one roof!"],
+
+			
+		];
+		
+		var infowindow = new google.maps.InfoWindow();
+
+		var marker, i;
+					
+		for (i = 0; i < locations.length; i++) 
+		{
+			var iconImage, heading;
+			
+			switch(locations[i][0]) {
+				case "Recreation":	
+					iconImage = "images/recreation.png";
+					heading = "<h2 class='PAR'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Capital":
+					iconImage = "images/capital.png";
+					heading = "<h2 class='PAR'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Hospital":
+					iconImage = "images/hospital.png";
+					heading = "<h2 class=''><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Park":
+					iconImage = "images/park.png";
+					heading = "<h2 class='PAR'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Plane":
+					iconImage = "images/plane.png";
+					heading = "<h2 class='TAL'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Food":
+					iconImage = "images/food.png";
+					heading = "<h2 class='food'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Fast Food":
+					iconImage = "images/fastfood.png";
+					heading = "<h2 class='food'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Lodging":
+					iconImage = "images/lodging.png";
+					heading = "<h2 class='TAL'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Play":
+					iconImage = "images/theatre.png";
+					heading = "<h2 class='entertainment'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Shopping":
+					iconImage = "images/shopping.png";
+					heading = "<h2 class='entertainment'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Movie":
+					iconImage = "images/movie.png";
+					heading = "<h2 class='entertainment'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				case "Museum":
+					iconImage = "images/museum.png";
+					heading = "<h2 class='entertainment'><img src="+iconImage+" />"+locations[i][3]+"</h2>";
+					break;
+				
+			}
+			marker = new google.maps.Marker({
+				icon: iconImage,
+				position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+				map: map
+			});
+			google.maps.event.addListener(marker, 'click', (function(marker, i, heading) {
+				return function() {
+					markerContent =	heading+"</h2><p><b>Description:</b> "+ locations[i][4]+"</p>";
+					infowindow.setContent(markerContent);
+					infowindow.open(map, marker);
+				}
+			})(marker, i, heading));  // end marker click function
+		}; // end for loop		
+	</script>
+
+
+
+<h3>  Thanks for visiting the page and we hope to see you soon!</h3>
+
+</div>
+</body>
+</html>
