@@ -81,7 +81,7 @@ BRUSHED.slider = function(){
 											{image : 'img/slider-images/image02.jpg', title : '<div class="slide-content">Dynamic Cartography</div>', thumb : '', url : ''},
 											{image : 'img/slider-images/image03.jpg', title : '<div class="slide-content">Design</div>', thumb : '', url : ''},*/ 
             /*Added by Brian David Davidson*/
-											{image : 'images/me_header.jpg', title : '<div class="slide-content"> Brian David Davidson<br/> <br/><div class="slide-text"> Cartographer/GIS Analyst.<br/> Web Designer/Developer.<br/> Southern Gentleman.</div></div>', thumb : '', url : ''} 
+											{image : 'images/me_header.jpg', title : '<div class="slide-content"> Brian David Davidson<br/> <br/><div class="slide-text"> UI/UX Developer.<br/> Cartographer/Designer.<br/> Southern Gentleman.</div></div>', thumb : '', url : ''} 
 									],
 									
 		// Theme Options			   
