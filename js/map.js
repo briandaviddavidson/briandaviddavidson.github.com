@@ -1,0 +1,16 @@
+var map = L.map('map', {
+    zoomControl: false
+}).setView([38.902990, -77.394562], 11);
+
+var tiles = L.tileLayer('http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Tiles © <a href="http://www.stamen.com">stamen design</a>',
+}).addTo(map);
+
+map.dragging.disable();
+map.touchZoom.disable();
+map.doubleClickZoom.disable();
+map.scrollWheelZoom.disable();
+
+var marker = L.marker([38.902990, -77.394562]).addTo(map);
+
+marker.bindPopup("<div> Please feel free to contact me about maps, UI/UX design and development, or if you just want to chat!<br/><br/><li>Email: <a href='mailto:briandaviddavidson@gmail.com'>briandaviddavidson@gmail.com</a></li><li>Phone: (404) 641-7629</li></div>").openPopup();

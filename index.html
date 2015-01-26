@@ -23,6 +23,9 @@
 
 <!-- Bootstrap -->
 <link href="css/bootstrap.min.css" rel="stylesheet">
+    
+<!--Leaflet Style-->
+<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
 
 <!-- Main Style -->
 <link href="css/main.css" rel="stylesheet">
@@ -122,7 +125,7 @@ alt="shopify site analytics"></a></div></noscript>
         
         <div id="menuBrian">
         	<a href="images/Davidson_Thesis.pdf" target="_blank" style="font-weight: 700;">Thesis</a>
-            <a href="images/Davidson_NACIS.pdf" target="_blank" style="font-weight: 700; margin-left:50px;">NACIS Presentation</a>
+            <a href="images/Davidson_NACIS.pdf" target="_blank" style="font-weight: 700; margin-left:50px;">NACIS 2014 Presentation</a>
         </div>
         
         <nav id="menu">
@@ -456,45 +459,17 @@ alt="shopify site analytics"></a></div></noscript>
 
 
 <!-- Contact Section -->
-<div id="contact" class="page">
-<div class="container">
+<div id="contact">
     <!-- Title Page -->
     <div class="row">
-        <div class="span12">
-            <div class="title-page">
-                <h2 class="title">Let me make your maps come to life</h2>
-            </div>
+        <div id="map" class="span12">
         </div>
     </div>
-    <!-- End Title Page -->
-    
-    <!-- Contact Form -->
-    <div class="row">
-    	<div class="span9">
-        
-        	<form id="contact-form" class="contact-form" action="php/contact.php" method="post">
-            	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />
-                </p>
-                <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />
-                </p>
-                <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>
-                </p>
-                <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Send Your Email</a>
-                </p>
-                
-                <div id="response">
-                
-                </div>
-            </form>
-         
-        </div>
-        
-        <div class="span3">
-        	<div class="contact-details">
+</div>
+
+<!-- End Contact Section -->
+
+    <!--<div class="contact-details">
         		<h3>Contact Details</h3>
                 <ul>
                     <li><a href="mailto:briandaviddavidson@gmail.com">briandaviddavidson@gmail.com</a></li>
@@ -503,37 +478,8 @@ alt="shopify site analytics"></a></div></noscript>
                     <li><a href="images/Davidson_MapResume.pdf">Map Resume</a></li>
                     
                 </ul>
-            </div>
-        </div>
-    </div>
-    <!-- End Contact Form -->
-</div>
-</div>
-<!-- End Contact Section -->
+            </div>-->
 
-<!-- Socialize
-<div id="social-area" class="page">
-	<div class="container">
-    	<div class="row">
-            <div class="span12">
-                <nav id="social">
-                    <ul>
-                        <li><a href="https://twitter.com/Bluxart" title="Follow Me on Twitter" target="_blank"><span class="font-icon-social-twitter"></span></a></li>
-                        <li><a href="http://dribbble.com/Bluxart" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
-                        <li><a href="http://forrst.com/people/Bluxart" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
-                        <li><a href="http://www.behance.net/alessioatzeni" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>
-                        <li><a href="https://www.facebook.com/Bluxart" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
-                        <li><a href="https://plus.google.com/105500420878314068694" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
-                        <li><a href="http://www.linkedin.com/in/alessioatzeni" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
-                        <li><a href="http://themeforest.net/user/Bluxart" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
-                        <li><a href="http://zerply.com/Bluxart/public" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- End Socialize -->
 
 <!-- Footer -->
 <footer>
@@ -541,11 +487,6 @@ alt="shopify site analytics"></a></div></noscript>
 </footer>
 <!-- End Footer -->
 
-<!-- Back To Top
-<a id="back-to-top" href="#work">
-	<i class="font-icon-arrow-simple-up"></i>
-</a>
-<!-- End Back to Top -->
 
 
 <!-- Js -->
@@ -553,6 +494,8 @@ alt="shopify site analytics"></a></div></noscript>
 <script src="js/bootstrap.min.js"></script> <!-- Bootstrap -->
 <script src="js/supersized.3.2.7.min.js"></script> <!-- Slider -->
 <script src="js/waypoints.js"></script> <!-- WayPoints -->
+<script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script><!--Leaflet-->
+<script src="js/map.js"></script> <!--Map JS-->
 <script src="js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
 <script src="js/jquery.isotope.js"></script> <!-- Isotope Filter -->
 <script src="js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
