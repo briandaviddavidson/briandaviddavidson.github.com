@@ -27,7 +27,7 @@ a:hover{
 	z-index:-1;
 	position:fixed;
 	width:100%;
-	height:25%;
+	height:30%;
 	top:0;
 	background-color:#2E8557; /* Change top background color */
 }
@@ -172,19 +172,19 @@ footer{
 /* MEDIA */
 @media (min-width: 961px){
 	#fab_email{
-		top:calc(25% - 30px);
+		top:calc(30% - 30px);
 		right:calc((100% - 150px)/4 - 30px);
 	}
 	#fab_linkedin{
-		top:calc(25% - 30px);
+		top:calc(30% - 30px);
 		right:calc((100% - 450px)/4 - 30px);
 	}
 	#fab_twitter{
-		top:calc(25% - 30px);
+		top:calc(30% - 30px);
 		right:calc((100% - 750px)/4 - 30px);
 	}
 	#fab_github{
-		top:calc(25% - 30px);
+		top:calc(30% - 30px);
 		right:calc((100% - 1050px)/4 - 30px);
 	}
 }
