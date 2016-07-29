@@ -1,3 +1,4 @@
+// Landing Page
 $(".linkedin").hover(function(){
 	colorImage(this)
 }, function(){
