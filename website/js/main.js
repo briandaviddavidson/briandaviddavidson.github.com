@@ -101,7 +101,7 @@
 	var counter = function() {
 		$('.js-counter').countTo({
 			 formatter: function (value, options) {
-	      return value.toFixed(options.decimals) + "+";
+	      return value.toFixed(options.decimals) + '+';
 	    },
 		});
 	};
@@ -180,37 +180,23 @@
 
 }());
 
-$(".linkedin").hover(function(){
-	colorImage(this)
+$('.linkedin').hover(function(){
+	$(this).attr('src', 'images/linkedin_color.svg')
 }, function(){
-	blackImage(this)
+	$(this).attr('src', 'images/linkedin.svg')
 })
-$(".twitter").hover(function(){
-	colorImage(this)
+$('.twitter').hover(function(){
+	$(this).attr('src', 'images/twitter_color.svg')
 }, function(){
-	blackImage(this)
+	$(this).attr('src', 'images/twitter.svg')
 })
-$(".github").hover(function(){
-	colorImage(this)
+$('.github').hover(function(){
+	$(this).attr('src', 'images/github_color.svg')
 }, function(){
-	blackImage(this)
+	$(this).attr('src', 'images/github.svg')
 })
-
-function colorImage(icon){
-	if ($(icon).hasClass('linkedin')){
-		$(icon).attr('src', 'images/linkedin_color.svg')
-	} else if ($(icon).hasClass('twitter')){
-		$(icon).attr('src', 'images/twitter_color.svg')	
-	} else { //github
-		$(icon).attr('src', 'images/github_color.svg')
-	}
-}
-function blackImage(icon){
-	if ($(icon).hasClass('linkedin')){
-		$(icon).attr('src', 'images/linkedin.svg')
-	} else if ($(icon).hasClass('twitter')){
-		$(icon).attr('src', 'images/twitter.svg')
-	} else { //github
-		$(icon).attr('src', 'images/github.svg')
-	}
-}
+$('.logo').hover(function(){
+	$(this).attr('src', 'images/bd_color.png')
+}, function(){
+	$(this).attr('src', 'images/bd_bw.png')
+})
