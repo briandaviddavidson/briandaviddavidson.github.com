@@ -681,11 +681,11 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 #map {
   width: 50%;
-  height: 400px;
+  height: 300px;
 }
 @media screen and (max-width: 768px) {
   #map {
-    height: 200px;
+    width: 100%;
   }
 }
 
