@@ -196,7 +196,7 @@ $('.github').hover(function(){
 	$(this).attr('src', 'images/github.svg')
 })
 $('.logo').hover(function(){
-	$(this).attr('src', 'images/bd_color.png')
+	$(this).attr('src', 'images/bd_color.jpg')
 }, function(){
-	$(this).attr('src', 'images/bd_bw.png')
+	$(this).attr('src', 'images/bd_bw.jpg')
 })
