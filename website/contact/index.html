@@ -93,19 +93,25 @@
 						</div>
 				</div>
 				<div class="row">
-					<form action="post" class="col-md-6">
+					<form action="https://formspree.io/briandaviddavidson@gmail.com" method="POST" class="col-md-6">
 						<div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name">
+								<input type="text" class="form-control" placeholder="Name" name="name">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email">
+								<input type="text" class="form-control" placeholder="Email" name="_replyto">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Phone">
+								<input type="hidden" name="_subject" value="Contact form submission" />
 							</div>
 							<div class="form-group">
-								<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+								<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message" name=""></textarea>
+							</div>
+							<div class="form-group">
+								<input type="text" name="_gotcha" style="display:none" />
+							</div>
+							<div class="form-group">
+								<input type="hidden" name="_next" value="../" />
 							</div>
 							<div class="form-group">
 								<input type="submit" class="btn btn-primary btn-md" value="Send Message">
