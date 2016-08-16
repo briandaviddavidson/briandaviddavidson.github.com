@@ -191,3 +191,21 @@ $('.logo').hover(function(){
 }, function(){
 	$(this).attr('src', 'images/bd_bw.jpg')
 })
+
+$('.name').on('input', checkIfValid)
+$('.email').on('input', checkIfValid)
+$('.message').on('input', checkIfValid)
+
+function checkIfValid(){
+	if ($('.name').val() !== '' && $('.email').val() !== '' && $('.message').val() !== ''){
+		$('.submit').attr('disabled', false)
+		$('.submit').removeClass('disabled')
+		$('.submit').removeClass('btn-danger')
+		$('.submit').addClass('btn-primary')
+	} else{
+		$('.submit').attr('disabled', true)
+		$('.submit').addClass('disabled')
+		$('.submit').addClass('btn-danger')
+		$('.submit').removeClass('btn-primary')
+	}
+}
