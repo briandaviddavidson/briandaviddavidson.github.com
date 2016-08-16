@@ -48,6 +48,7 @@
 					<li><a href="../portfolio/">Portfolio</a></li>
 					<li><a href="../about/">About</a></li>
 					<li class="fh5co-active"><a href="contact/">Contact</a></li>
+					<li><a href="../resume/">Resume</a></li>
 				</ul>
 			</nav>
 
@@ -96,16 +97,13 @@
 					<form action="https://formspree.io/briandaviddavidson@gmail.com" method="POST" class="col-md-6">
 						<div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Name" name="name">
+								<input type="text" class="form-control name" placeholder="Name" name="name">
 							</div>
 							<div class="form-group">
-								<input type="text" class="form-control" placeholder="Email" name="_replyto">
+								<input type="text" class="form-control email" placeholder="Email" name="_replyto">
 							</div>
 							<div class="form-group">
-								<input type="hidden" name="_subject" value="Contact form submission" />
-							</div>
-							<div class="form-group">
-								<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message" name="message"></textarea>
+								<textarea name="" id="message" cols="30" rows="7" class="form-control message" placeholder="Message" name="message"></textarea>
 							</div>
 							<div class="form-group">
 								<input type="text" name="_gotcha" style="display:none" />
@@ -114,7 +112,10 @@
 								<input type="hidden" name="_next" value="../" />
 							</div>
 							<div class="form-group">
-								<input type="submit" class="btn btn-primary btn-md" value="Send Message">
+								<input type="hidden" name="_subject" value="Contact form submission" />
+							</div>
+							<div class="form-group">
+								<input type="submit" class="btn btn-primary btn-md disabled submit" value="Send Message" disabled>
 							</div>
 						</div>
 					</form>
