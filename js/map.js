@@ -19,5 +19,5 @@ L.tileLayer('https://api.mapbox.com/styles/v1/mapbox/streets-v9/tiles/256/{z}/{x
 // add a marker in the given location
 var marker = L.marker([38.9586310,-77.3570030]).addTo(map);
 
-// marker.bindPopup("<div> Please feel free to contact me about maps, UI/UX design and development, or if you just want to chat!<br/><br/><li>Email: <a href='mailto:briandaviddavidson@gmail.com'>briandaviddavidson@gmail.com</a></li><li>Phone: (404) 641-7629</li></div>").openPopup();
+// marker.bindPopup("<div> Please feel free to contact me about maps, UI/UX design and development, or if you just want to chat!<br/><br/><li>Email: <a href='mailto:hello@briandaviddavidson.com'>hello@briandaviddavidson.com</a></li><li>Phone: (404) 641-7629</li></div>").openPopup();
 
