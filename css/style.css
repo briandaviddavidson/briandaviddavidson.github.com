@@ -728,11 +728,11 @@ input:focus, textarea:focus {
   }
 .fh5co-feature .fh5co-icon i {
   color: #7f939a;
-  font-size: 70px;
+  font-size: 110px;
 }
 @media screen and (max-width: 1200px) {
   .fh5co-feature .fh5co-icon i {
-    font-size: 40px;
+    font-size: 70px;
   }
   .social{
     width: 30px;
