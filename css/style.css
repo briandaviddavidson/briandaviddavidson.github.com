@@ -995,22 +995,22 @@ input:focus, textarea:focus {
 }
 
 .btn-primary {
-  background: #7f939a;
-  color: #fff;
-  border: 2px solid #7f939a;
+  background: #FFFFFF;
+  color: #7f939a;
+  border: 2px solid #FFFFFF;
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background: #98A8AE !important;
-  border-color: #98A8AE !important;
+  background: #ffffff !important;
+  border-color: #ffffff !important;
 }
 .btn-primary.btn-outline {
   background: transparent;
-  color: #7f939a;
-  border: 2px solid #7f939a;
+  color: #FFFFFF;
+  border: 2px solid #FFFFFF;
 }
 .btn-primary.btn-outline:hover, .btn-primary.btn-outline:focus, .btn-primary.btn-outline:active {
-  background: #7f939a;
-  color: #fff;
+  background-color: #FFFFFF;
+  color: #7f939a;
 }
 
 .btn-success {
