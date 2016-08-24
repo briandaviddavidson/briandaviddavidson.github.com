@@ -517,6 +517,12 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
   background-size: cover;
   background-attachment: fixed;
 }
+.fh5co-portfolio-homepage {
+  padding: 1em 0;
+  background: #7f939a;
+  background-size: cover;
+  background-attachment: fixed;
+}
 .fh5co-counters .fh5co-counter {
   font-size: 50px;
   display: block;
@@ -543,6 +549,14 @@ body.offcanvas #fh5co-main, body.offcanvas .fh5co-nav-toggle {
 
 .fh5co-heading-colored {
   color: #7f939a;
+}
+
+.fh5co-heading-white {
+  color: #FFFFFF;
+}
+
+.fh5co-font-white {
+  color: #FFFFFF;
 }
 
 .fh5co-cards {
