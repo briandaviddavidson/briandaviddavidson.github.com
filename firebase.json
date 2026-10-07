@@ -1,0 +1,35 @@
+{
+  "hosting": {
+    "public": ".",
+    "cleanUrls": true,
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      ".git",
+      ".git/**",
+      ".firebase/**",
+      ".gitignore",
+      "**/.*",
+      "**/node_modules/**",
+      "README.md",
+      "CNAME",
+      "_*",
+      "sass/**",
+      "Resume.pdf",
+      "*.docx",
+      "bdd-headshot.jpeg",
+      "firebase-debug.log"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(css|js|jpg|jpeg|png|svg|woff|woff2|ttf|eot|otf|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=86400"
+          }
+        ]
+      }
+    ]
+  }
+}
