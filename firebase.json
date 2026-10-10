@@ -12,7 +12,6 @@
       "**/.*",
       "**/node_modules/**",
       "README.md",
-      "CNAME",
       "_*",
       "sass/**",
       "Resume.pdf",
@@ -29,6 +28,23 @@
             "value": "public, max-age=86400"
           }
         ]
+      }
+    ],
+    "redirects": [
+      {
+        "regex": "^/projections(?:/(?P<path>.*))?$",
+        "destination": "https://briandaviddavidson.github.io/projections/:path",
+        "type": 301
+      },
+      {
+        "regex": "^/git-and-github(?:/(?P<path>.*))?$",
+        "destination": "https://briandaviddavidson.github.io/git-and-github/:path",
+        "type": 301
+      },
+      {
+        "regex": "^/d3-maptime(?:/(?P<path>.*))?$",
+        "destination": "https://briandaviddavidson.github.io/d3-maptime/:path",
+        "type": 301
       }
     ]
   }

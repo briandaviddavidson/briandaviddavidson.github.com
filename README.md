@@ -49,3 +49,7 @@ DNS is managed at Squarespace Domains.
 | `briandaviddavidson.com` | This site (Firebase project `briandaviddavidson-site`) |
 | `www.briandaviddavidson.com` | Redirects to `briandaviddavidson.com` |
 | `time.briandaviddavidson.com` | [TIME Person of the Year app](https://github.com/briandaviddavidson/time-person-of-the-year) (Firebase project `time-person-of-the-year`) |
+
+`/projections/`, `/git-and-github/` and `/d3-maptime/` are old Maptime talk pages still hosted on GitHub Pages. The `redirects` in `firebase.json` send those paths to `briandaviddavidson.github.io/<repo>/`.
+
+GitHub Pages can't be turned off for this repo (it's the account's user site), so it also serves a copy at `briandaviddavidson.github.io`. A script in `index.html` redirects visitors from there to `briandaviddavidson.com`. Don't add a `CNAME` file; it would point GitHub Pages back at this domain.
