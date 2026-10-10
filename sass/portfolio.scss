@@ -247,8 +247,8 @@ h3 {
   padding: 0;
   list-style: none;
 
-  @include above($bp-desktop) {
-    grid-template-columns: repeat(3, 1fr);
+  @include above($bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -262,8 +262,9 @@ h3 {
   overflow: hidden;
 
   &.featured {
+    grid-column: 1 / -1;
+
     @include above($bp-desktop) {
-      grid-column: 1 / -1;
       flex-direction: row;
 
       .project-media {
