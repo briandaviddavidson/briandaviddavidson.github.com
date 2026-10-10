@@ -1,6 +1,6 @@
 # briandaviddavidson.com
 
-Source for my personal portfolio site, [briandaviddavidson.com](https://briandaviddavidson.com). It's a single static page: plain HTML, with styles written in Sass. There's no framework and no build step beyond compiling the CSS.
+Source for my personal portfolio site, [briandaviddavidson.com](https://briandaviddavidson.com). The portfolio is a single static page: plain HTML, with styles written in Sass. A small build script also pulls in my other projects so everything is served from one domain.
 
 ## Layout
 
@@ -14,7 +14,8 @@ Source for my personal portfolio site, [briandaviddavidson.com](https://briandav
 | `bdd-headshot.jpeg` | Full-resolution headshot (not deployed) |
 | `Davidson_Thesis.pdf` | M.S. thesis, linked from the Education section |
 | `_index-original.html` | Reference copy of the 2022 resume page with the original job-description bullets (not deployed) |
-| `firebase.json`, `.firebaserc` | Firebase Hosting config |
+| `scripts/build.sh` | Assembles the deployable site in `dist/` (gitignored) |
+| `firebase.json`, `.firebaserc` | Firebase Hosting config; serves `dist/` |
 
 ## Local development
 
@@ -30,15 +31,30 @@ After editing `sass/portfolio.scss`, recompile the CSS:
 npx sass --no-source-map sass/portfolio.scss css/portfolio.css
 ```
 
+## Site paths
+
+| Path | Source |
+|---|---|
+| `/` | This repo |
+| `/time-person-of-the-year/` | [time-person-of-the-year](https://github.com/briandaviddavidson/time-person-of-the-year), built with `yarn build` |
+| `/projections/` | [projections](https://github.com/briandaviddavidson/projections) (`gh-pages` branch), Maptime talk |
+| `/git-and-github/` | [git-and-github](https://github.com/briandaviddavidson/git-and-github) (`gh-pages` branch), Maptime talk |
+| `/d3-maptime/` | [d3-maptime](https://github.com/briandaviddavidson/d3-maptime) (`gh-pages` branch), Maptime talk |
+
 ## Deploying
 
-The site is hosted on Firebase Hosting in the `briandaviddavidson-site` Google Cloud project. Deploy from the repo root:
+The site is hosted on Firebase Hosting in the `briandaviddavidson-site` Google Cloud project. Build, then deploy, from the repo root:
 
 ```sh
+./scripts/build.sh
 npx firebase-tools deploy --only hosting
 ```
 
-The `ignore` list in `firebase.json` keeps `.git`, the Sass sources, this README, the reference backup and other non-site files out of the deploy. If you add a file that shouldn't be public, add it to that list too.
+`build.sh` copies an explicit list of portfolio files into `dist/`, so nothing else in this repo is published. It then clones the project repos above and adds them under their paths, building the TIME app with Yarn. Rerun it whenever any of those repos change. Before a risky change, deploy to a temporary preview URL first:
+
+```sh
+npx firebase-tools hosting:channel:deploy preview --expires 1h
+```
 
 ## Domains
 
@@ -48,8 +64,6 @@ DNS is managed at Squarespace Domains.
 |---|---|
 | `briandaviddavidson.com` | This site (Firebase project `briandaviddavidson-site`) |
 | `www.briandaviddavidson.com` | Redirects to `briandaviddavidson.com` |
-| `time.briandaviddavidson.com` | [TIME Person of the Year app](https://github.com/briandaviddavidson/time-person-of-the-year) (Firebase project `time-person-of-the-year`) |
+| `time.briandaviddavidson.com` | Redirects to `/time-person-of-the-year/` (Firebase project `time-person-of-the-year`) |
 
-`/projections/`, `/git-and-github/` and `/d3-maptime/` are old Maptime talk pages still hosted on GitHub Pages. The `redirects` in `firebase.json` send those paths to `briandaviddavidson.github.io/<repo>/`.
-
-GitHub Pages can't be turned off for this repo (it's the account's user site), so it also serves a copy at `briandaviddavidson.github.io`. A script in `index.html` redirects visitors from there to `briandaviddavidson.com`. Don't add a `CNAME` file; it would point GitHub Pages back at this domain.
+GitHub Pages is turned off for this repo and the project repos; everything is served from `briandaviddavidson.com`.
