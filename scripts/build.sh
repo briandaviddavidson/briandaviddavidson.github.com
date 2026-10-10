@@ -3,7 +3,7 @@
 #   /                          this repo (portfolio page)
 #   /time-person-of-the-year/  built from briandaviddavidson/time-person-of-the-year
 #   /projections/, /git-and-github/, /d3-maptime/
-#                              Maptime talk decks, from each repo's gh-pages branch
+#                              Maptime talk decks, from each repo's default branch
 set -euo pipefail
 cd "$(dirname "$0")/.."
 
@@ -21,7 +21,7 @@ cp -R index.html favicon.ico Davidson_Thesis.pdf css fonts images "$OUT"/
 
 for talk in "${TALKS[@]}"; do
   echo "Adding /$talk/"
-  git clone -q --depth 1 --branch gh-pages "https://github.com/$OWNER/$talk.git" "$WORK/$talk"
+  git clone -q --depth 1 "https://github.com/$OWNER/$talk.git" "$WORK/$talk"
   mkdir -p "$OUT/$talk"
   git -C "$WORK/$talk" archive HEAD | tar -x -C "$OUT/$talk"
 done

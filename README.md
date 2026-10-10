@@ -37,9 +37,9 @@ npx sass --no-source-map sass/portfolio.scss css/portfolio.css
 |---|---|
 | `/` | This repo |
 | `/time-person-of-the-year/` | [time-person-of-the-year](https://github.com/briandaviddavidson/time-person-of-the-year), built with `yarn build` |
-| `/projections/` | [projections](https://github.com/briandaviddavidson/projections) (`gh-pages` branch), Maptime talk |
-| `/git-and-github/` | [git-and-github](https://github.com/briandaviddavidson/git-and-github) (`gh-pages` branch), Maptime talk |
-| `/d3-maptime/` | [d3-maptime](https://github.com/briandaviddavidson/d3-maptime) (`gh-pages` branch), Maptime talk |
+| `/projections/` | [projections](https://github.com/briandaviddavidson/projections), Maptime talk |
+| `/git-and-github/` | [git-and-github](https://github.com/briandaviddavidson/git-and-github), Maptime talk |
+| `/d3-maptime/` | [d3-maptime](https://github.com/briandaviddavidson/d3-maptime), Maptime talk |
 
 ## Deploying
 
