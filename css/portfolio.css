@@ -369,3 +369,54 @@ a.row-detail .icon {
   padding-top: 96px;
   text-align: center;
 }
+
+.job summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding-left: 22px;
+}
+.job summary::-webkit-details-marker {
+  display: none;
+}
+.job summary::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+.job summary:hover .row-title {
+  color: var(--accent-strong);
+}
+.job summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.job[open] summary::before {
+  transform: rotate(45deg);
+  top: 0.4em;
+}
+
+.job-bullets {
+  list-style: disc;
+  margin: 10px 0 4px;
+  padding-left: 40px;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+.job-bullets li + li {
+  margin-top: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .job summary::before {
+    transition: none;
+  }
+}
