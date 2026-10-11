@@ -57,7 +57,7 @@ git clone -q --depth 1 "https://github.com/$OWNER/google-dash.git" "$WORK/google
   VITE_TITLE="Google Dash" \
   VITE_DESCRIPTION="A situational-awareness dashboard on Google Maps" \
   VITE_LOGO=logo.svg \
-  VITE_FAVICON=favicon.ico \
+  VITE_FAVICON=favicon.svg \
     npx vite build --base /google-dash/ --outDir "$OLDPWD/$OUT/google-dash" --logLevel warn
 )
 
