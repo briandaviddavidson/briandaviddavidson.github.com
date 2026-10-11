@@ -2,6 +2,7 @@
 # Assemble the whole site into dist/ for Firebase Hosting:
 #   /                          this repo (portfolio page)
 #   /time-person-of-the-year/  built from briandaviddavidson/time-person-of-the-year
+#   /google-dash/              static demo of briandaviddavidson/google-dash (browser-only storage)
 #   /projections/, /git-and-github/, /d3-maptime/
 #                              Maptime talk decks, from each repo's default branch
 set -euo pipefail
@@ -10,6 +11,20 @@ cd "$(dirname "$0")/.."
 OWNER=briandaviddavidson
 OUT=dist
 TALKS=(projections git-and-github d3-maptime)
+
+# Google Dash demo: Maps key restricted to briandaviddavidson.com/google-dash/*.
+# Pass GOOGLE_DASH_MAPS_KEY, or let gcloud look it up (set GCLOUD_ACCOUNT to pick
+# the account that can read the briandavidson-dash-demo project).
+GDASH_PROJECT=briandavidson-dash-demo
+GDASH_KEY_NAME="Google Dash public demo"
+if [[ -z "${GOOGLE_DASH_MAPS_KEY:-}" ]]; then
+  gcloud_args=(--project="$GDASH_PROJECT")
+  [[ -n "${GCLOUD_ACCOUNT:-}" ]] && gcloud_args+=(--account="$GCLOUD_ACCOUNT")
+  key_name=$(gcloud services api-keys list "${gcloud_args[@]}" \
+    --filter="displayName=\"$GDASH_KEY_NAME\"" --format='value(name)' | head -1)
+  GOOGLE_DASH_MAPS_KEY=$(gcloud services api-keys get-key-string "$key_name" \
+    "${gcloud_args[@]}" --format='value(keyString)')
+fi
 
 WORK=$(mktemp -d)
 trap 'rm -rf "$WORK"' EXIT
@@ -30,5 +45,19 @@ echo "Building /time-person-of-the-year/"
 git clone -q --depth 1 "https://github.com/$OWNER/time-person-of-the-year.git" "$WORK/time"
 (cd "$WORK/time" && yarn install --frozen-lockfile --silent && yarn -s build)
 cp -R "$WORK/time/build" "$OUT/time-person-of-the-year"
+
+echo "Building /google-dash/"
+git clone -q --depth 1 "https://github.com/$OWNER/google-dash.git" "$WORK/google-dash"
+(
+  cd "$WORK/google-dash"
+  npm ci --silent --no-audit --no-fund
+  VITE_STORAGE_MODE=local \
+  VITE_GOOGLE_MAPS_API_KEY="$GOOGLE_DASH_MAPS_KEY" \
+  VITE_TITLE="Google Dash" \
+  VITE_DESCRIPTION="A situational-awareness dashboard on Google Maps" \
+  VITE_LOGO=logo.svg \
+  VITE_FAVICON=favicon.ico \
+    npx vite build --base /google-dash/ --outDir "$OLDPWD/$OUT/google-dash" --logLevel warn
+)
 
 echo "Built $OUT/ ($(du -sh "$OUT" | cut -f1))"
