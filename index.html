@@ -4,34 +4,78 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Brian Davidson · Senior Customer Engineer</title>
-  <meta name="description" content="Brian Davidson is a customer engineer and technical educator working on developer platforms across mapping, identity, and cloud.">
-  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="Brian Davidson is a Senior Customer Engineer for Google Maps Platform. Projects, talks, and open-source tools across mapping, identity, and cloud.">
   <link rel="canonical" href="https://briandaviddavidson.com/">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f4f6f8" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#11161c" media="(prefers-color-scheme: dark)">
 
-  <link rel="icon" href="favicon.ico">
+  <!-- Link previews (Open Graph / LinkedIn / Slack, and X) -->
+  <meta property="og:type" content="profile">
+  <meta property="og:site_name" content="Brian Davidson">
+  <meta property="og:title" content="Brian Davidson · Senior Customer Engineer">
+  <meta property="og:description" content="Projects, talks, and open-source tools across mapping, identity, and cloud.">
+  <meta property="og:url" content="https://briandaviddavidson.com/">
+  <meta property="og:image" content="https://briandaviddavidson.com/images/social-card.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Brian Davidson, Senior Customer Engineer, Google Maps Platform">
+  <meta property="profile:first_name" content="Brian">
+  <meta property="profile:last_name" content="Davidson">
+  <meta name="twitter:card" content="summary_large_image">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.ico" sizes="48x48">
+  <link rel="icon" href="images/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
 
+  <!-- Montserrat (headings) is self-hosted; preload it so the name renders in the right font. -->
+  <link rel="preload" href="fonts/montserrat-700-latin.woff2" as="font" type="font/woff2" crossorigin>
   <!-- CSS (portfolio.css is compiled from sass/portfolio.scss) -->
-  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/portfolio.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "url": "https://briandaviddavidson.com/",
+    "mainEntity": {
+      "@type": "Person",
+      "name": "Brian Davidson",
+      "alternateName": "Brian David Davidson",
+      "url": "https://briandaviddavidson.com/",
+      "image": "https://briandaviddavidson.com/images/bdd-headshot-336.jpg",
+      "jobTitle": "Senior Customer Engineer",
+      "worksFor": { "@type": "Organization", "name": "Google" },
+      "alumniOf": [
+        { "@type": "CollegeOrUniversity", "name": "University of Wisconsin–Madison" },
+        { "@type": "CollegeOrUniversity", "name": "University of South Carolina" }
+      ],
+      "knowsAbout": ["Google Maps Platform", "Cartography", "GIS", "Identity and access management", "APIs", "Developer platforms"],
+      "sameAs": [
+        "https://www.linkedin.com/in/briandaviddavidson/",
+        "https://github.com/briandaviddavidson"
+      ]
+    }
+  }
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="wrap">
-      <img class="headshot" src="images/bdd-headshot-480.jpg" width="480" height="480" alt="Headshot of Brian Davidson">
+      <picture>
+        <source srcset="images/bdd-headshot-336.webp" type="image/webp">
+        <img class="headshot" src="images/bdd-headshot-336.jpg" width="336" height="336" alt="Headshot of Brian Davidson" fetchpriority="high">
+      </picture>
       <div>
         <h1 class="site-title">Brian Davidson</h1>
         <p class="site-role">Senior Customer Engineer, Google Maps Platform</p>
         <ul class="header-links">
-          <li><a class="button" href="https://www.linkedin.com/in/briandaviddavidson/" target="_blank" rel="noopener"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</a></li>
-          <li><a class="button" href="https://github.com/briandaviddavidson" target="_blank" rel="noopener"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a></li>
-          <li><a class="button primary" href="https://calendar.app.google/koE9KoQnfnevPUQR6" target="_blank" rel="noopener"><i class="fa fa-calendar" aria-hidden="true"></i>Book a meeting</a></li>
+          <li><a class="button" href="https://www.linkedin.com/in/briandaviddavidson/" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+          <li><a class="button" href="https://github.com/briandaviddavidson" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.07 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3"/></svg>GitHub</a></li>
+          <li><a class="button primary" href="https://calendar.app.google/koE9KoQnfnevPUQR6" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></g></svg>Book a meeting</a></li>
         </ul>
       </div>
     </div>
@@ -53,7 +97,10 @@
         <ul class="projects">
           <li class="project featured">
             <div class="project-media">
-              <img src="images/time.png" width="1920" height="963" alt="TIME Person of the Year app, showing the title page and a world map shaded by how many honorees each country has produced">
+              <picture>
+                <source type="image/webp" srcset="images/time-640.webp 640w, images/time-1000.webp 1000w" sizes="(min-width: 900px) 500px, (min-width: 720px) 680px, calc(100vw - 32px)">
+                <img src="images/time-1000.jpg" width="1000" height="502" alt="TIME Person of the Year app, showing the title page and a world map shaded by how many honorees each country has produced" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="project-body">
               <h3>TIME Person of the Year</h3>
@@ -66,7 +113,10 @@
           </li>
           <li class="project featured">
             <div class="project-media">
-              <img src="images/google-dash.jpg" width="1568" height="779" alt="Google Dash showing satellite imagery of the National Mall with dropped data layers and a selected annotation">
+              <picture>
+                <source type="image/webp" srcset="images/google-dash-640.webp 640w, images/google-dash-1000.webp 1000w" sizes="(min-width: 900px) 500px, (min-width: 720px) 680px, calc(100vw - 32px)">
+                <img src="images/google-dash-1000.jpg" width="1000" height="497" alt="Google Dash showing satellite imagery of the National Mall with dropped data layers and a selected annotation" loading="lazy" decoding="async">
+              </picture>
             </div>
             <div class="project-body">
               <h3>Google Dash</h3>
@@ -151,7 +201,7 @@
           <li class="row">
             <span>
               <span class="row-title">M.S., Cartography and GIS, University of Wisconsin–Madison</span>
-              <a class="row-detail" href="Davidson_Thesis.pdf" target="_blank" rel="noopener"><i class="fa fa-file-pdf-o" aria-hidden="true"></i> Read my thesis (PDF)</a>
+              <a class="row-detail" href="Davidson_Thesis.pdf" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></g></svg>Read my thesis (PDF)</a>
             </span>
             <span class="row-meta">2014</span>
           </li>

@@ -9,8 +9,9 @@ Source for my personal portfolio site, [briandaviddavidson.com](https://briandav
 | `index.html` | The site |
 | `sass/portfolio.scss` | Styles (source) |
 | `css/portfolio.css` | Compiled styles; commit it alongside the Sass |
-| `css/font-awesome.min.css`, `fonts/` | Font Awesome 4 icons |
-| `images/` | Web-sized headshot and project screenshots |
+| `fonts/montserrat-700-latin.woff2` | Self-hosted heading font (cached for a year: rename the file if you replace it) |
+| `images/` | Headshot and project screenshots (WebP with JPEG fallback), `social-card.jpg` for link previews, site icons |
+| `404.html`, `robots.txt`, `sitemap.xml`, `site.webmanifest`, `favicon.ico`, `apple-touch-icon.png` | Site plumbing; update `sitemap.xml` when you add a page |
 | `bdd-headshot.jpeg` | Full-resolution headshot (not deployed) |
 | `Davidson_Thesis.pdf` | M.S. thesis, linked from the Education section |
 | `_index-original.html` | Reference copy of the 2022 resume page with the original job-description bullets (not deployed) |
