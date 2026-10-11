@@ -32,7 +32,8 @@ rm -rf "$OUT"
 mkdir -p "$OUT"
 
 # Portfolio: an explicit list, so nothing else in the repo is published.
-cp -R index.html favicon.ico Davidson_Thesis.pdf css fonts images "$OUT"/
+cp -R index.html 404.html favicon.ico apple-touch-icon.png site.webmanifest robots.txt sitemap.xml \
+  Davidson_Thesis.pdf css fonts images "$OUT"/
 
 for talk in "${TALKS[@]}"; do
   echo "Adding /$talk/"
