@@ -35,6 +35,12 @@ mkdir -p "$OUT"
 cp -R index.html 404.html favicon.ico apple-touch-icon.png site.webmanifest robots.txt sitemap.xml \
   Davidson_Thesis.pdf css fonts images "$OUT"/
 
+# Cache-bust the stylesheet: it's cached for a day, so give each version its
+# own URL. Otherwise a returning visitor can get new HTML with old CSS.
+css_hash=$(shasum "$OUT/css/portfolio.css" | cut -c1-10)
+sed -i.bak "s|css/portfolio.css\"|css/portfolio.css?v=$css_hash\"|" "$OUT/index.html" "$OUT/404.html"
+rm -f "$OUT"/*.bak
+
 for talk in "${TALKS[@]}"; do
   echo "Adding /$talk/"
   git clone -q --depth 1 "https://github.com/$OWNER/$talk.git" "$WORK/$talk"
