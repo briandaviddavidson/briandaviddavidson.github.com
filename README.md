@@ -37,6 +37,7 @@ npx sass --no-source-map sass/portfolio.scss css/portfolio.css
 |---|---|
 | `/` | This repo |
 | `/time-person-of-the-year/` | [time-person-of-the-year](https://github.com/briandaviddavidson/time-person-of-the-year), built with `yarn build` |
+| `/google-dash/` | [google-dash](https://github.com/briandaviddavidson/google-dash), static demo built in browser-only storage mode |
 | `/projections/` | [projections](https://github.com/briandaviddavidson/projections), Maptime talk |
 | `/git-and-github/` | [git-and-github](https://github.com/briandaviddavidson/git-and-github), Maptime talk |
 | `/d3-maptime/` | [d3-maptime](https://github.com/briandaviddavidson/d3-maptime), Maptime talk |
@@ -50,7 +51,9 @@ The site is hosted on Firebase Hosting in the `briandaviddavidson-site` Google C
 npx firebase-tools deploy --only hosting
 ```
 
-`build.sh` copies an explicit list of portfolio files into `dist/`, so nothing else in this repo is published. It then clones the project repos above and adds them under their paths, building the TIME app with Yarn. Rerun it whenever any of those repos change. Before a risky change, deploy to a temporary preview URL first:
+`build.sh` copies an explicit list of portfolio files into `dist/`, so nothing else in this repo is published. It then clones the project repos above and adds them under their paths, building the TIME app with Yarn and the Google Dash demo with npm.
+
+The Google Dash demo needs its Maps API key (project `briandavidson-dash-demo`, restricted to `briandaviddavidson.com/google-dash/*`, with daily quota caps). `build.sh` looks it up with `gcloud`; if gcloud's active account can't read that project, run `GCLOUD_ACCOUNT=<your account> ./scripts/build.sh`, or pass the key directly as `GOOGLE_DASH_MAPS_KEY`. The key is never committed. Rerun it whenever any of those repos change. Before a risky change, deploy to a temporary preview URL first:
 
 ```sh
 npx firebase-tools hosting:channel:deploy preview --expires 1h
